@@ -85,7 +85,7 @@ gcloud beta healthcare hl7v2-stores create $HL7_STORE_ID \
 --pubsub-topic=projects/$PROJECT_ID/topics/$HL7_TOPIC
 ```
 
-#### Step two
+#### Step three
 
 Patch HL7 store to parse HL7 to JSON.
 
@@ -104,7 +104,7 @@ curl -X PATCH \
     }" "https://healthcare.googleapis.com/v1beta1/projects/$PROJECT_ID/locations/$LOCATION/datasets/$DATASET_ID/hl7V2Stores/$HL7_STORE_ID?updateMask=parser_config.schema"
 ```
 
-#### Step three
+#### Step four
 
 Create a FHIR store.
 
@@ -118,7 +118,7 @@ gcloud healthcare fhir-stores create $FHIR_STORE_ID \
 --enable-update-create
 ```
 
-#### Step four
+#### Step five
 
 Set up the appropriate permissions to enable exporting data from your FHIR store
 to BigQuery.
@@ -134,7 +134,7 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
 
 This may take a few seconds to complete.
 
-#### Step five
+#### Step six
 
 Enable streaming from FHIR store to BigQuery
 
