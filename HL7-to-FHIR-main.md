@@ -195,7 +195,7 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
   --role=roles/storage.objectAdmin
 ```
 
-#### Step three
+#### Step five
 
 Create a new VM by navigate to Compute Engine. \
 Select create instance. Name your instance **dataflow-vm.** \
@@ -207,7 +207,7 @@ Check Allow full access to all Cloud APIs. Check **Allow HTTP and HTTPS
 traffic.** \
 Select create.
 
-#### Step four
+#### Step six
 
 Once the VM has initialized, under connect SSH into the VM.
 
@@ -251,13 +251,13 @@ curl -X GET \
      "https://healthcare.googleapis.com/v1beta1/projects/$PROJECT_ID/locations/$LOCATION/datasets/$DATASET_ID/hl7V2Stores/$HL7_STORE_ID/messages"
 ```
 
-#### Step three
+#### Step four
 
 Navigate to the Healthcare API product in the GCP console, select FHIR viewer. \
 Select **datastore,** then **fhirtore,** to see resources that were sent \
 from the HL7 message and mapped to FHIR. Select a resource to view its contents.
 
-#### Step four
+#### Step five
 
 Navigate to BigQuery, under your project drop-down select **fhirdata.** \
 Tables should be populated based on the resources that were created.
