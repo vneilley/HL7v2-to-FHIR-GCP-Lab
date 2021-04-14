@@ -239,7 +239,7 @@ export SUBSCRIPTION=hl7subscription
 export ERROR_BUCKET=$PROJECT_ID/error
 export MAPPING_BUCKET=$PROJECT_ID/mapping
 export LOCATION=us-central1
-export DATASET=demoset
+export DATASET=datastore
 export FHIRSTORE=fhirstore
 ```
 
